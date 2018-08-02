@@ -22,7 +22,9 @@ RUN apk --update add \
     make \
     php5-pear \
     unzip \
-    wget && \
+    wget \
+    icu \
+    icu-dev && \
     docker-php-ext-install bcmath mcrypt zip bz2 mbstring pcntl xsl && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
     docker-php-ext-install gd && \
