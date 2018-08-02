@@ -27,6 +27,8 @@ RUN apk --update add \
     docker-php-ext-install gd && \
     docker-php-ext-configure ldap --with-libdir=lib/ && \
     docker-php-ext-install ldap && \
+    docker-php-ext-configure intl && \
+    docker-php-ext-install intl && \
     apk del build-base && \
     rm -rf /var/cache/apk/*
 
