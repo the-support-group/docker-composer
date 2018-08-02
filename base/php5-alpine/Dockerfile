@@ -15,6 +15,7 @@ RUN apk --update add \
     libmcrypt-dev \
     libpng-dev \
     libbz2 \
+    bzip2-dev \
     libstdc++ \
     libxslt-dev \
     openldap-dev \
