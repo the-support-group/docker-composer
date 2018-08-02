@@ -27,6 +27,8 @@ RUN docker-php-ext-install bcmath mcrypt zip bz2 mbstring pcntl xsl \
   && docker-php-ext-install gd \
   && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ \
   && docker-php-ext-install ldap
+  && docker-php-ext-configure intl \
+  && docker-php-ext-install intl
 
 # Memory Limit
 RUN echo "memory_limit=-1" > $PHP_INI_DIR/conf.d/memory-limit.ini
